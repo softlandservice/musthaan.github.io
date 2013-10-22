@@ -1,0 +1,44 @@
+  $.ajax( {
+                            url: "../Services/PropertyService.svc/Property",
+                            type: "POST",
+                            data:   JSON.stringify( {PropertyName_EN:PropertyName_EN,PropertyName_AR:PropertyName_AR,
+                                PropertyType_EN:PropertyType_EN,
+                                PropertyType_AR:PropertyType_AR,
+                                LandOrBuilding:LandOrBuilding,
+                                PropertyDescriptionEnglish:PropertyDecriptionEng,
+                                PropertyDescriptionArabic:PropertyDecriptionArb,
+                                Purpose_AR:PurposeArb,
+                                Purpose_EN:PurposeEng,
+                                LandArea:landArea,
+                                LandDescription_EN:LandDescriptionEng,
+                                LandDescription_AR:LandDescriptionEng,
+                                ApartmentArea:ApartmentArea,
+                                NumberOfFloors:NumberOfFloors,
+                                NumberOfRooms:NumberOfRooms,
+                                FurnishedStatus:FurnishedStatus,
+                                ApartmentViewStatus:ApartmentViewStatus,
+                                NumberOfBathrooms:NumberOfBathRooms,
+                                NumberOfReservedParking:NumberOfReservedParking,
+                                PriceRangeFrom:PriceRangeFrom,
+                                PriceRangeTo:PriceRangeTo,
+                                StreetID:StreetID,
+                                PropertyCommunity_EN:'',
+                                PropertyLocation_EN:'',
+                                PropertyLocation_AR:'',
+                                PropertyCommunity_AR:'',
+                                LeadID:137,
+                                AmenityIDs:AmenityIDs
+
+
+
+                            }),
+                            success: function () {
+                                wizard.submitSuccess(); // displays the success card
+                                wizard.hideButtons(); // hides the next and back buttons
+                                wizard.updateProgressBar( 0 ); // sets the progress meter to 0
+                            },
+                            error: function () {
+                                wizard.submitError(); // display the error card
+                                wizard.hideButtons(); // hides the next and back buttons
+                            }
+                        } );
