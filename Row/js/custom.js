@@ -1068,7 +1068,7 @@ function initialize(id) {
 
     var locations = [
         //point number 1
-        ['Softland Services', 'Ottappalam', 36.986021, -122.02216399999998]
+        ['Softland Services', 'Ottappalam', 10.771105, 76.379263]
     ];
 
 /*** DON'T CHANGE ANYTHING PASSED THIS LINE ***/
